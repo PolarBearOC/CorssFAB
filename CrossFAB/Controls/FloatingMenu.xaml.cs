@@ -119,7 +119,7 @@ namespace CrossFAB.Controls
                 Children[i].Scale = 0.7;
                 AbsoluteLayout.SetLayoutBounds(Children[i], new Rectangle(0, (60 * i), 60, 60));
                 Children[i].Rotation = 180;
-                ((FloatingButton)Children[i]).ExtraCommand = new Command(() => { Collapse(AnimationTime); });
+                ((FloatingButton)Children[i]).ExtraCommand = new Command(() => {  MainButton?.OnClickCommand.Execute(null); });
             }
 
             Collapse(1);
